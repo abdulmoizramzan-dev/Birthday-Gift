@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Aymen 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 10px 0 30px;
+      font-weight: normal;
+    }
+
+    .btn {
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 40px;
+      background: white;
+      color: #ff4f7a;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    .message {
+      position: absolute;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    .video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      filter: brightness(0.6);
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.95);
+      color: #333;
+      padding: 35px;
+      border-radius: 25px;
+      max-width: 600px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Screen -->
+  <div class="hero" id="hero">
+    <h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+    <h2>Aymen 💖</h2>
+    <button class="btn" onclick="showSurprise()">Click Here 🎁</button>
+  </div>
+
+  <!-- Second Screen: Fun Surprise with Video -->
+  <div class="message" id="message">
+    <video class="video-bg" autoplay muted loop>
+      <source src="C:\Users\HY LAPTOP\OneDrive\Desktop\Hamood habibi(360P).mp4" type="video/mp4">
+    </video>
+
+    <div class="card">
+      <h3>SURPRISE 😆</h3>
+      <p>
+        AMUN HABIBIIIIIIIIII!!!!!! 💃<br /><br />
+        I HAD to do this 😂 Even miles apart, we’re still vibing.
+        <br /><br />
+        READY FOR SOMETHING REAL? 💙
+      </p>
+      <button class="btn" onclick="showReflection()">Next ➜</button>
+    </div>
+
+    <audio id="music" loop>
+      <source src="C:\Users\HY LAPTOP\OneDrive\Desktop\Hamood habibi(MP3_160K).mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- Third Screen: Reflection -->
+  <div class="message" id="reflection" style="background:black;">
+    <div class="card" style="background:#111;color:#fff;">
+      <h3>🌱 A Little Note</h3>
+      <p>
+        These years have been full of ups and downs.
+        Some days were heavy, some days were beautiful —
+        but every step shaped who you are today.
+        <br /><br />
+        I’m really proud of you. 💙
+      </p>
+      <button class="btn" onclick="showFriends()">Next ➜</button>
+    </div>
+  </div>
+
+  <!-- Fourth Screen: Friends -->
+  <div class="message" id="friends" style="background:black;">
+    <div class="card" style="background:#111;color:#fff;">
+      <h3>🤍 Us</h3>
+      <p>
+        We became close friends —
+        and that’s something I’ll always be grateful for.
+        No matter the distance, that bond still matters.
+      </p>
+      <button class="btn" onclick="showMadrid()">Next ➜</button>
+    </div>
+  </div>
+
+  <!-- Fifth Screen: Football Banter -->
+  <div class="message" id="madrid" style="background:black;">
+    <div class="card" style="background:#111;color:#fff;">
+      <h3>⚽️ Match Update</h3>
+      <p style="font-size:1.2rem;">
+        Real Madrid lost 😬<br />
+        Barcelona won 😌
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('hero').style.display = 'none';
+      document.getElementById('message').style.display = 'flex';
+      document.getElementById('music').play();
+    }
+
+    function showReflection() {
+      document.getElementById('message').style.display = 'none';
+      document.getElementById('reflection').style.display = 'flex';
+      document.getElementById('music').pause();
+    }
+
+    function showFriends() {
+      document.getElementById('reflection').style.display = 'none';
+      document.getElementById('friends').style.display = 'flex';
+    }
+
+    function showMadrid() {
+      document.getElementById('friends').style.display = 'none';
+      document.getElementById('madrid').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
